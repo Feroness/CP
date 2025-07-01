@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
     <title>CP - Lista de Ferramentas IA</title>
 
     <style>
         body{
-            background-color: #333;
+            background-color: #2d1600;
         }
         h1, h2, h3, ul, li{
             color: #fff
         }
+        h1,h2,h3{
+            font-family: "Nunito", sans-serif;
+        }
+
         a{
             color: #fff;
             transition: 0.3s;
             font-size: 15pt;
+            font-family: "Josefin Sans", sans-serif;
         }
         
         .space{
@@ -33,16 +46,39 @@
 </head>
 <body>
     <header>
-        <img src="img/CP2.png" alt="logo principal" title="Bem-vindo ao maior arsenal de IAs (de graça)" class="w-100 img-fluid">
+        <img src="img/CP3.png" alt="logo principal" title="Bem-vindo ao maior arsenal de IAs (de graça)" class="w-100 img-fluid">
     </header>
 
     <!-- Conteúdo -->
-     
-    <main>
-        <div class="container space">
 
+    <main>
+            <div class="container space">
+                <h2 style="color:#00ff15">Índice</h2>
+
+                <ul>
+                    <li><a href="#geradoresDeEmail">Geradores de Email Temporário</a></li>
+                    
+                    <li><a href="#geradoresDeVideo">Geradores de Vídeo</a></li>
+                    <ul>
+                        <li><a href="#geradoresDeVideoTemp">Que Suportam Email Temporário GENÉRICO</a></li>
+                        <li><a href="#geradoresDeVideoTempGMAIL">Que Suportam Email Temporário GMAIL</a></li>
+                        <li><a href="#geradoresDeVideoNotTemp">Que NÃO Suportam Email Temporário</a></li>
+                    </ul>
+
+                    <li><a href="#geradoresDeImagem">Geradores de Imagem</a></li>
+                    <ul>
+                        <li><a href="#imgTempMail">Precisam de Temp Mail</a></li>
+                        <li><a href="#imgNotTempMail">Não Precisam de Temp Mail</a></li>
+                        <li><a href="#imgNotSupportsTempMail">Não Suportam Temp Mail</a></li>
+                    </ul>
+                    
+                </ul>
+            </div>
+
+            <div class="container space">
+
+            <h2 class="space" id="geradoresDeEmail" style="color:#00ff15">Geradores de Email Temporário</h2>
             <ul>
-                <h2 class="space">Geradores de Email Temporário</h2>
                 <li><a href="https://www.emailnator.com/" target="_blank">Gmailnator (Emailnator) (Gera Gmail e Googlemail)</a></li>
                 <li><a href="https://emailtick.com/pt" target="_blank">emailtick (Gera Gmail e Googlemail)</a></li>
                 <li><a href="https://tempail.com/pt/" target="_blank">tempail (Emails genéricos) (O melhor)</a></li>
@@ -52,11 +88,12 @@
             </ul>
 
 
-            <h2 class="space">Geradores de Vídeo</h2>
+            <h2 class="space" id="geradoresDeVideo" style="color:#00ff15">Geradores de Vídeo</h2>
 
             
             <ul>
-                <h3 class="space">Suportam Email Temporário Genérico</h3>
+                <h3 class="space" id="geradoresDeVideoTemp" style="color:#00ffea">Suportam Email Temporário Genérico</h3>
+
                 <li><a href="https://magi.sand.ai/app" target="_blank">Sand Magi</a></li>
                 <li><a href="https://videomaker.me/" target="_blank">videomaker.me (resolução até 540p) (Qualidade muito boa)</a></li>
                 <li><a href="https://lunaai.video/pt/app" target="_blank">lunaai.video (resolução até 720p) (Qualidade boa)</a></li>
@@ -76,22 +113,70 @@
             </ul>
 
             <ul>
-                <h3 class="space">Suportam Email Temporário Gmail ou Googlemail</h3>
+                <h3 class="space" id="geradoresDeVideoTempGMAIL" style="color:#00ffea">Suportam Email Temporário Gmail ou Googlemail</h3>
+
                 <li><a href="https://vidful.ai/pt/app" target="_blank">Vidful AI (resolução até 540p) (Qualidade muito boa)</a></li>   
                 <li><a href="https://app.ltx.studio/" target="_blank">LTX Studio (Vídeos com Resolução Baixa) (Geração Rápida)</a></li> 
-                <li><a href="https://klingai.com/global/" target="_blank">Kling AI (Nem sempre está disponível) (Sempre limpe os cookies do site ao criar outra conta)</a></li>
-                          
-                       
+                <li><a href="https://klingai.com/global/" target="_blank">Kling AI (Nem sempre está disponível) (Sempre limpe os cookies do site ao criar outra conta)</a></li>      
             </ul>
 
             <ul>
-                <h3 class="space">Não Suportam Email Temporário</h3>
+                <h3 class="space" id="geradoresDeVideoNotTemp" style="color:#00ffea">Não Suportam Email Temporário</h3>
+
                 <li><a href="https://aistudio.google.com/generate-video" target="_blank">Google Veo 2 (Limite diário)</a></li>         
             </ul>
 
-                       
+            <h2 class="space" id="geradoresDeImagem" style="color:#00ff15">Geradores de Imagem</h2>
+
+            <ul>
+                <h3 class="space" id="imgTempMail" style="color:#00ffea">Precisam de Temp Mail</h3>
+                <li><a href="https://preview.reve.art/app" target="_blank">Reve (Qualidade Muito Boa)</a></li>       
+                <li><a href="https://piclumen.com/app/image-generator/create" target="_blank">Piclumen (Suporte a Flux Schnell) (Boa para geração de entidades como Arcanjo Miguel e estátuas para estoicismo) (Precisa de VPN+Limpar cache do site para burlar)</a></li>   
+                <li><a href="https://www.shakker.ai/" target="_blank">Shakker AI (Qualidade Altíssima 1080p) (com ComfyUI)</a></li>
+                <li><a href="https://dreamina.capcut.com/ai-tool/image/generate" target="_blank">Capcut Dreamina Seedream 3.0 (Muito boa)</a></li>   
+                <li><a href="https://www.recraft.ai/" target="_blank">Recraft AI (Imagens realistas) (Gera imagens de famosos)</a></li>
+                <li><a href="https://raphael.app/pt" target="_blank">Raphael.app</a></li>
+
+                <li><a href="https://www.artguru.ai/pt/create/" target="_blank">Artguru AI (bem limitada) (Não gera em widescreen) (Qualidade Boa)</a></li> 
+                <li><a href="https://civitai.com/" target="_blank">CivitAI (Vários modelos)</a></li> 
+                <li><a href="https://www.freepik.com/pikaso/ai-image-generator" target="_blank">Freepik AI (Não suporta temp mail genérico, só gmail temporário) (Geração rápida)</a></li> 
+                <li><a href="https://mage.space" target="_blank">Mage Space (Não suporta temp mail genérico) (Ilimitado)</a></li> 
+                <li><a href="https://app.giz.ai/" target="_blank">Giz AI (Não suporta temp mail genérico, só gmail temporário)</a></li> 
+                <li><a href="https://playground.com/design" target="_blank">playground.com (geração de design) (100 imagens por dia)</a></li> 
+                <li><a href="https://ideogram.ai/" target="_blank">ideogram AI (geração de thumbnail e etc) (100 imagens por dia)</a></li> 
+                <li><a href="https://app.leonardo.ai/" target="_blank">Leonardo AI (150 créditos por dia) (Só Temp GMAIL)</a></li>
+            </ul>
+            
+            <ul>
+                <h3 class="space" id="imgNotTempMail" style="color:#00ffea">Não Precisam de Temp Mail</h3>
+                <li><a href="https://perchance.org/ai-text-to-image-generator" target="_blank">perchance AI Image Generator (Gera até 32 Imagens ao mesmo tempo) (Qualidade ótima)</a></li>
+                <li><a href="https://freeflux.ai/" target="_blank">Freeflux (precisa de email, porém é ilimitada, sem precisar ficar gerando temp mail)</a></li>
+                <li><a href="https://pt.vidnoz.com/ia-gerador-de-imagens-gratis.html" target="_blank">Vidnoz Gen</a></li>
+                <li><a href="https://aifreebox.com/" target="_blank">AiFreeBox (Geração de vários tipos de imagem + 500 IAs) (Até 20 imagens por dia, exceto com o uso de VPN)</a></li>
+                <li><a href="https://dezgo.com/app" target="_blank">dezgo (geração lenta)</a></li>
+                <li><a href="https://comfyuiweb.com/" target="_blank">Comfy UI Web</a></li>
+                <li><a href="https://www.runcomfy.com/comfyui-web" target="_blank">Run Comfy (Geração Rápida)</a></li>
+                <li><a href="https://aigallery.app/create" target="_blank">AI Gallery (Geração Lenta)</a></li>
+            </ul>
+
+            <ul>
+                <h3 class="space" id="imgNotSupportsTempMail" style="color:#00ffea">Não Suportam Temp Mail</h3>
+                <li><a href="https://www.bing.com/images/create?cc=br" target="_blank">Bing AI (Limite Diário, dá para burlar logando em outras contas da Microsoft)</a></li>
+                <li><a href="https://fluxpro.art/create" target="_blank">fluxpro.art (10 créditos a cada 24h)</a></li>
+                <li><a href="https://labs.google/fx/pt/tools/image-fx" target="_blank">Google ImageFX (Limite Diário)</a></li>
+                <li><a href="https://aistudio.google.com/prompts/new_image" target="_blank">Google Imagen 4 (Muito boa) (Limite Diário)</a></li>
+                <li><a href="https://designer.microsoft.com/image-creator" target="_blank">Microsoft Image-Creator (15 créditos por mês)</a></li>
+                <li><a href="https://meta.ai" target="_blank">Meta AI</a></li>
+            </ul>
             
         </div>
     </main>
 </body>
 </html>
+
+<!-- 
+PARA IMPLEMENTAR DEPOIS:
+
+https://build.nvidia.com/models -> VÁRIOS MODELOS GRÁTIS PARA TESTE (INCLUINDO API KEY)
+
+-->
