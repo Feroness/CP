@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
+
+
+
     <title>CP - Lista de Ferramentas IA</title>
 
     <style>
@@ -41,21 +44,122 @@
             transition: 0.3s;
             
         }
+
+
+            /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+    /** {
+    scrollbar-width: thin;
+    scrollbar-color: #750000 #DFE9EB;
+    }*/
+
+    /* Chrome, Edge and Safari */
+    *::-webkit-scrollbar {
+    height: 9px;
+    width: 9px;
+    }
+    *::-webkit-scrollbar-track {
+    border-radius: 7px;
+    background-color: #DFE9EB;
+    }
+
+    *::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+    }
+
+    *::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+    }
+
+    *::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #750000;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+    background-color: #11A301;
+    }
+
+    *::-webkit-scrollbar-thumb:active {
+    background-color: #1B29A3;
+    }
+
+    
+
     </style>
 
 </head>
-<body>
-    <header>
-        <img src="img/CP3.png" alt="logo principal" title="Bem-vindo ao maior arsenal de IAs (de graça)" class="w-100 img-fluid">
+    <body>
+        <header class="container-fluid bg-black py-3">
+    <div class="row align-items-center">
+        <!-- Banner do lado esquerdo -->
+        <div class="col-md-8 col-12">
+        <img src="img/CP3.png" alt="logo principal" title="Bem-vindo ao maior arsenal de IAs (de graça)" class="img-fluid w-100">
+        </div>
+
+        <!-- Cubo 3D do lado direito -->
+        <div class="col-md-4 col-12">
+        <div id="cubo3d-container" style="width: 100%; aspect-ratio: 1 / 1;"></div>
+        </div>
+    </div>
     </header>
 
     <!-- Conteúdo -->
+
+    <!-- CUBO 3D -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+
+    <script>
+    const container = document.getElementById('cubo3d-container');
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    container.appendChild(renderer.domElement);
+
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshNormalMaterial();
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+    camera.position.z = 2.5;
+
+    function resize() {
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    function animate() {
+        requestAnimationFrame(animate);
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        renderer.render(scene, camera);
+    }
+
+    animate();
+    </script>
 
     <main>
             <div class="container space">
                 <h2 style="color:#00ff15">Índice</h2>
 
                 <ul>
+                    <li><a href="#indicesDePirataria">Índices de Pirataria</a></li>
+
+                    <li><a href="#canaisYTubeIA">Canais de Youtube sobre IA</a></li>
+                    <ul>
+                        <li><a href="#IAsNoGeral">IAs no Geral</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#sobreAchadinhos">Sobre Achadinhos / Afiliados</a></li>
+                    </ul>
+                    
+
                     <li><a href="#geradoresDeEmail">Geradores de Email Temporário</a></li>
                     
                     <li><a href="#geradoresDeVideo">Geradores de Vídeo</a></li>
@@ -71,11 +175,45 @@
                         <li><a href="#imgNotTempMail">Não Precisam de Temp Mail</a></li>
                         <li><a href="#imgNotSupportsTempMail">Não Suportam Temp Mail</a></li>
                     </ul>
+
+                    <li><a href="#videoParaShorts">Video para Shorts</a></li>
                     
                 </ul>
             </div>
 
             <div class="container space">
+
+            <h2 class="space" id="indicesDePirataria" style="color:#00ff15">Índices de Pirataria</h2>
+            <ul>
+                <li><a href="https://pirataria.link/" target="_blank">Megathread Pirataria c/pirataria</a></li>
+                <li><a href="https://lkrjangid1.github.io/Awesome-Warez/" target="_blank">Awesome Warez</a></li>
+                <li><a href="https://champagne.pages.dev/" target="_blank">Champagne Piracy Wiki</a></li>
+                <li><a href="https://rentry.org/PiracyBG-PTBR/" target="_blank">PiracyBG PTBR</a></li>
+                <li><a href="https://mediasavvy.pages.dev/" target="_blank">Mediasavvy</a></li>
+                <li><a href="https://everythingmoe.com/" target="_blank">EverythingMoe</a></li>
+                <li><a href="https://fmhy.net/" target="_blank">FMHY (FREE MEDIA HECKY YEAH)</a></li>
+                <li><a href="https://rentry.org/pgames/" target="_blank">Pirated Games</a></li>
+                <li><a href="https://ripped.guide/" target="_blank">Ripped Guide</a></li>
+                <li><a href="https://theindex.moe/" target="_blank">The Index</a></li>
+                <li><a href="https://wotaku.moe/" target="_blank">Wotaku</a></li>
+                <li><a href="https://www.reddit.com/r/Piracy/wiki/megathread/?show_source" target="_blank">Megathread r/Piracy Reddit</a></li>
+                <li><a href="https://leaked-system-prompts.com/" target="_blank">Vazamento de prompts de chat</a></li>
+                
+            </ul>
+
+            <h2 class="space" id="canaisYTubeIA" style="color:#00ff15">Canais de Youtube sobre IA</h2>
+            <ul>
+                <h3 class="space" id="IAsNoGeral" style="color:#00ffea">IAs no Geral</h3>
+                <li><a href="https://www.youtube.com/@SikPrompt" target="_blank">Sik Prompt</a></li>
+                <li><a href="https://www.youtube.com/@YouEnsina" target="_blank">You Ensina</a></li>
+                
+            </ul>
+            <ul>
+                <h3 class="space" id="sobreAchadinhos" style="color:#00ffea">Sobre Achadinhos / Afiliados</h3>
+                <li><a href="https://www.youtube.com/@andergavineski" target="_blank">Anderson Gavineski</a></li>
+            </ul>
+            
+            
 
             <h2 class="space" id="geradoresDeEmail" style="color:#00ff15">Geradores de Email Temporário</h2>
             <ul>
@@ -89,8 +227,6 @@
 
 
             <h2 class="space" id="geradoresDeVideo" style="color:#00ff15">Geradores de Vídeo</h2>
-
-            
             <ul>
                 <h3 class="space" id="geradoresDeVideoTemp" style="color:#00ffea">Suportam Email Temporário Genérico</h3>
 
@@ -123,6 +259,8 @@
             <ul>
                 <h3 class="space" id="geradoresDeVideoNotTemp" style="color:#00ffea">Não Suportam Email Temporário</h3>
 
+
+                <li><a href="https://www.youtube.com/watch?v=MhYcrRKvqwQ" target="_blank">Google Veo 3 (APROVEITE ENQUANTO FUNCIONA) (Veja o vídeo como usar)</a></li>   
                 <li><a href="https://aistudio.google.com/generate-video" target="_blank">Google Veo 2 (Limite diário)</a></li>         
             </ul>
 
@@ -150,6 +288,7 @@
             <ul>
                 <h3 class="space" id="imgNotTempMail" style="color:#00ffea">Não Precisam de Temp Mail</h3>
                 <li><a href="https://perchance.org/ai-text-to-image-generator" target="_blank">perchance AI Image Generator (Gera até 32 Imagens ao mesmo tempo) (Qualidade ótima)</a></li>
+                <li><a href="https://criandocomisaac.com/gerador-imagens/" target="_blank">Gerador de imagens do Criando com IsAac (Qualidade ótima) (Muitos modelos e estilos)</a></li>
                 <li><a href="https://freeflux.ai/" target="_blank">Freeflux (precisa de email, porém é ilimitada, sem precisar ficar gerando temp mail)</a></li>
                 <li><a href="https://pt.vidnoz.com/ia-gerador-de-imagens-gratis.html" target="_blank">Vidnoz Gen</a></li>
                 <li><a href="https://aifreebox.com/" target="_blank">AiFreeBox (Geração de vários tipos de imagem + 500 IAs) (Até 20 imagens por dia, exceto com o uso de VPN)</a></li>
@@ -167,6 +306,13 @@
                 <li><a href="https://aistudio.google.com/prompts/new_image" target="_blank">Google Imagen 4 (Muito boa) (Limite Diário)</a></li>
                 <li><a href="https://designer.microsoft.com/image-creator" target="_blank">Microsoft Image-Creator (15 créditos por mês)</a></li>
                 <li><a href="https://meta.ai" target="_blank">Meta AI</a></li>
+            </ul>
+
+            <h2 class="space" id="videoParaShorts" style="color:#00ff15">Video Para Shorts</h2>
+
+            <ul>
+                <h3 class="space" id="imgTempMail" style="color:#00ffea">Não Precisam de Temp Mail</h3>
+                <li><a href="https://app.2short.ai/" target="_blank">2shorts.ai</a></li>
             </ul>
             
         </div>
